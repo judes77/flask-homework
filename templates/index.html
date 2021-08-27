@@ -1,16 +1,35 @@
-<html>
-    <head>
-        <title>{{ title }} - Weekend Events</title>
-    </head>
-    <body>
-        <h1>Weekend Events</h1>
-        {% for event in events %}
+{% extends 'base.html' %}
+{% block content %}
+    
+
+    <h1>Weekend Events</h1>
+
+    
+<form action="/events" method="post">
+    <label for="date">Date</label>
+    <input type="text" name="date" id="date">
+
+    <label for="name">Name</label> 
+    <input type="text" name="name" id="name">
+
+    <label for="number of guests">Number of Guests</label>
+    <input type="text" name="number of guests" id="number of guests">
+
+    <label for="location">Location</label>
+    <input type="text" name="location" id="Location">
+
+    <label for="description">Description</label>
+    <textarea name="description" id="description" cols="20" rows="4"></textarea>
+    <input type="submit" value="Add Event">
+</form>
+
+    {% for event in events %}
         <div>
             <p>
-               <b>{{ event.date }}, </b><b>{{ event.name_of_event }}, </b><b>{{ event.number_of_guests }}, </b><b>{{ event.room_location }}, </b><b>{{ event.description }}</b>
+               <b>Date: {{ event.date }} </b><b>Type: {{ event.name_of_event }} </b><b>Number of guests: {{ event.number_of_guests }} </b><b>Location: {{ event.room_location }}, </b><b>{{ event.description }}</b>
             </p>
         </div>
             
-        {% endfor %}
-    </body>
-</html>
+    {% endfor %}
+{% endblock content %}
+  
