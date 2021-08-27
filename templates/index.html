@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>{{ title }} - Weekend Events</title>
+    </head>
+    <body>
+        <h1>Weekend Events</h1>
+        {% for event in events %}
+        <div>
+            <p>
+               <b>{{ event.date }}, </b><b>{{ event.name_of_event }}, </b><b>{{ event.number_of_guests }}, </b><b>{{ event.room_location }}, </b><b>{{ event.description }}</b>
+            </p>
+        </div>
+            
+        {% endfor %}
+    </body>
+</html>
