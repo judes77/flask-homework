@@ -2,10 +2,11 @@
 {% block content %}
     
 
-    <h1>Weekend Events</h1>
-
+    <h1>September Events</h1>
+    <br>
+    <b>
+    <form action="/events" method="post" class="form">
     
-<form action="/events" method="post">
     <label for="date">Date</label>
     <input type="text" name="date" id="date">
 
@@ -20,15 +21,20 @@
 
     <label for="description">Description</label>
     <textarea name="description" id="description" cols="20" rows="4"></textarea>
-    <input type="submit" value="Add Event">
+    </b>
+    <br>
+    <br>
+    <input class="button" type="submit" value="Add Event">
 </form>
-
+    <br>
+    <br>
     {% for event in events %}
         <div>
             <p>
-               <b>Date: {{ event.date }} </b><b>Type: {{ event.name_of_event }} </b><b>Number of guests: {{ event.number_of_guests }} </b><b>Location: {{ event.room_location }}, </b><b>{{ event.description }}</b>
+               <b>Date: {{ event.date }} <pre></pre> Name: {{ event.name_of_event }} <pre></pre></b><b>Number of guests: {{ event.number_of_guests }} <pre></pre></b><b>Location: {{ event.room_location }}, </b><b>{{ event.description }}</b>
             </p>
         </div>
+        <br>
             
     {% endfor %}
 {% endblock content %}

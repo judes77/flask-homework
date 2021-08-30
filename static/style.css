@@ -1,0 +1,31 @@
+h1 {
+    color: rgb(4, 5, 7);
+    text-align: center;
+    color: rgb(59, 30, 88);
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(57, 33, 58);
+    background-color: rgb(232, 225, 238);
+}
+
+li {
+
+    list-style-type: none;
+}
+
+.button {
+    border-color: darkgray;
+}
+
+form > label {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(70, 27, 59);
+    }
+
+div {
+    margin: 30;
+}
+
+
